@@ -11,10 +11,6 @@ const Contact = () => {
   const apiKey = import.meta.env.VITE_API_KEY;
   
   const [result, setResult] = React.useState("");
-    
-    
-    console.log('API URL:', apiUrl);
-    console.log('API Key:', apiKey);
 
   const onSubmit = async (event) => {
     event.preventDefault();
