@@ -7,18 +7,23 @@ import location_icon from '../../assets/location-icon.png'
 import white_arrow from '../../assets/white-arrow.png'
 
 const Contact = () => {
-
-    const [result, setResult] = React.useState("");
+  const apiUrl = import.meta.env.VITE_API_URL;
+  const apiKey = import.meta.env.VITE_API_KEY;
+  
+  const [result, setResult] = React.useState("");
+    
+    
+    console.log('API URL:', apiUrl);
+    console.log('API Key:', apiKey);
 
   const onSubmit = async (event) => {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.target);
 
-    formData.append("access_key", 
-        "4a05e0d3-af13-4dda-b45c-f1bfad924701");
+    formData.append("access_key", apiKey);
 
-    const response = await fetch("https://api.web3forms.com/submit", {
+    const response = await fetch(`${apiUrl}/submit`, {
       method: "POST",
       body: formData
     });
