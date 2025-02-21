@@ -1,7 +1,7 @@
 # Edusity
 
 A simple react JS landing page project.
-The contact us section on the page is functional, as the https://web3forms.com/ API is leverage.
+The contact us section on the page is functional, as the https://web3forms.com/ API is in use.
 
 ## Run the app locally
 
